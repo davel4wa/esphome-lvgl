@@ -99,7 +99,7 @@ sensor:
           id: temperatures
           text:
             format: "%d° / %d°"
-            args: [ '(int)round(x)', '(int)round(id(indoor_temperature).state)' ]
+            args: [ '(int)round(x)', '(int)round(id(inside_temperature).state)' ]
 
   # ===========================================================================
   # SENSOR: Office Blind Position
