@@ -69,7 +69,17 @@ sensor:
             format: "%d° / %d°"
             args: [ '(int)round(id(outdoor_temperature).state)', '(int)round(x)' ]
 
-  # ===========================================================================
+  #  # ===========================================================================
+  - platform: homeassistant
+    entity_id: climate.water_heater
+    id: WH_temperature
+    on_value:
+      - lvgl.label.update:
+          id: wh_temperature
+          text:
+            format: "%d°"
+            args: [ '(int)round(id(outdoor_temperature).state)' ]
+===========================================================================
   # SENSOR: Outdoor Temperature
   # ===========================================================================
   # WHAT IT MONITORS:
